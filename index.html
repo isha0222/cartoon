@@ -302,9 +302,15 @@
             isPlaying = !isPlaying;
         });
 
+        window.addEventListener("load", function () {
+    const music = document.getElementById("bgMusic");
+    music.play().catch(function(){
         document.body.addEventListener("click", function(){
-    document.getElementById("bgMusic").play();
+            music.play();
+        });
+    });
 });
+
         
         // Floating hearts animation
         function createHeart() {
