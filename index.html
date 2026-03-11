@@ -302,13 +302,10 @@
             isPlaying = !isPlaying;
         });
 
-        window.addEventListener("load", function () {
+       window.addEventListener("load", function () {
     const music = document.getElementById("bgMusic");
-    music.play().catch(function(){
-        document.body.addEventListener("click", function(){
-            music.play();
-        });
-    });
+    music.muted = false;
+    music.play();
 });
 
         
